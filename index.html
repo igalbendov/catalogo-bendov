@@ -1,0 +1,541 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Catálogo de procedimientos de Bendov Clínica Estética: armonización facial, corporal, ginecoestética y bienestar hormonal. Las Condes, Santiago.">
+<meta property="og:title" content="Catálogo · Bendov Clínica Estética">
+<meta property="og:description" content="Lo que sigue después de tu primer procedimiento. Hasta 12 cuotas sin interés.">
+<meta name="theme-color" content="#0D112D">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Bendov">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230D112D'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Georgia,serif' font-size='34' fill='%23B8933F'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230D112D'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Georgia,serif' font-size='34' fill='%23B8933F'%3EB%3C/text%3E%3C/svg%3E">
+<!-- ===== MEDICIÓN =====
+  1) Google Analytics 4: reemplaza G-XXXXXXXXXX (2 veces) por tu ID de medición.
+  2) Vercel Analytics: activa "Analytics" en el proyecto; el script se sirve solo.
+  Eventos: origen · modo (paciente/primera vez) · journey_click · procedimiento_abierto · tab_click · busqueda ·
+           recomendacion_resultado (zona, inquietud, preferencia, top) · whatsapp_click [CONVERSIÓN] · scroll · tiempo_en_pagina
+-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX', { anonymize_ip: true });
+  window.track = function(name, params){
+    params = Object.assign({origen: (window.source || (location.hash||'').slice(1) || 'directo')}, params || {});
+    try { gtag('event', name, params); } catch(e){}
+    try { window.va && window.va('event', {name: name, data: params}); } catch(e){}
+  };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+<style>img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Catálogo · Bendov Clínica Estética</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap">
+<style>
+/* Layout: app móvil de una página. Hero tipográfico + selector "Soy paciente / Primera vez", carruseles con scroll-snap, hoja inferior (bottom sheet) para fichas y para el recomendador guiado, barra inferior fija. Crema/navy/dorado. */
+:root{
+  --bg:#F5F0E6; --surface:#FFFFFF; --fg:#0D112D; --muted:#5E6279; --line:#E2DACB;
+  --accent:#B8933F; --accent-soft:#F3EAD4; --navy:#0D112D; --on-navy:#F5F0E6; --navy-2:#161B3D;
+  --display:'Playfair Display',Georgia,'Times New Roman',serif;
+  --body:'DM Sans',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --r:20px; --tab-h:64px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#0B0F27;--surface:#141937;--fg:#F3EEE4;--muted:#A6AAC0;--line:#262C52;--accent:#D4B36A;--accent-soft:#272842;--navy:#F3EEE4;--on-navy:#0B0F27;--navy-2:#E7E0D2;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0B0F27;--surface:#141937;--fg:#F3EEE4;--muted:#A6AAC0;--line:#262C52;--accent:#D4B36A;--accent-soft:#272842;--navy:#F3EEE4;--on-navy:#0B0F27;--navy-2:#E7E0D2;color-scheme:dark}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.5;padding-bottom:calc(var(--tab-h) + env(safe-area-inset-bottom,0px));overscroll-behavior-y:none;touch-action:manipulation}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:40;background:var(--navy)}
+.wrap{padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px));max-width:980px;margin:0 auto}
+h1,h2,h3,h4{font-family:var(--display);font-weight:500;line-height:1.1;margin:0;text-wrap:balance}
+p{margin:0}
+a{color:inherit}
+button{font-family:var(--body)}
+.eyebrow{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:600}
+.muted{color:var(--muted)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;border-radius:999px;padding:12px 20px;font-weight:600;font-size:.95rem;text-decoration:none;border:1px solid transparent;cursor:pointer;white-space:nowrap}
+.btn-gold{background:var(--accent);color:#0D112D}
+.btn-navy{background:var(--navy);color:var(--on-navy)}
+.btn-line{border-color:var(--line);background:var(--surface);color:var(--fg)}
+.btn:active{transform:scale(.98)}
+
+/* ===== HERO ===== */
+.hero{background:var(--navy);color:var(--on-navy);padding-block:22px 28px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-18vw;top:-10vh;width:70vw;height:70vw;max-width:520px;max-height:520px;border-radius:50%;border:1px solid color-mix(in srgb,var(--accent) 55%,transparent);pointer-events:none}
+.hero::before{content:"";position:absolute;right:-6vw;top:8vh;width:46vw;height:46vw;max-width:340px;max-height:340px;border-radius:50%;border:1px solid color-mix(in srgb,var(--accent) 30%,transparent);pointer-events:none}
+.hero .wrap{position:relative;display:grid;gap:18px}
+.brandbar{display:flex;align-items:center;justify-content:space-between}
+.brand{font-family:var(--display);font-size:1rem;letter-spacing:.06em;text-transform:uppercase}
+.brand b{font-weight:600}
+.since{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);border:1px solid color-mix(in srgb,var(--accent) 60%,transparent);padding:5px 10px;border-radius:999px}
+.hero h1{font-size:clamp(2.4rem,11vw,4.6rem);letter-spacing:-.01em;margin-top:8px}
+.hero h1 em{font-style:italic;font-weight:400;color:var(--accent)}
+.hero p.lead{color:color-mix(in srgb,var(--on-navy) 78%,transparent);font-size:1.02rem;max-width:30em}
+.mode{display:grid;grid-template-columns:1fr 1fr;gap:6px;background:color-mix(in srgb,var(--on-navy) 10%,transparent);padding:6px;border-radius:999px;margin-top:6px}
+.mode button{min-height:48px;border-radius:999px;border:0;background:transparent;color:var(--on-navy);font-weight:600;font-size:.95rem;cursor:pointer}
+.mode button[aria-pressed="true"]{background:var(--accent);color:#0D112D}
+.hero-docs{display:flex;align-items:center;gap:10px;margin-top:4px}
+.hero-docs .stack{display:flex}
+.hero-docs .stack .avatar{border:2px solid var(--navy);margin-left:-14px}
+.hero-docs .stack .avatar:first-child{margin-left:0}
+.hero-docs span.t{font-size:.84rem;color:color-mix(in srgb,var(--on-navy) 78%,transparent)}
+.pillars{display:flex;gap:8px;flex-wrap:wrap;margin-top:4px}
+.pillars span{font-size:.78rem;color:color-mix(in srgb,var(--on-navy) 75%,transparent);display:inline-flex;align-items:center;gap:6px}
+.pillars span::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--accent)}
+
+/* ===== SECTIONS ===== */
+section{padding-block:30px}
+.sec-head{display:grid;gap:6px;margin-bottom:16px}
+.sec-head h2{font-size:clamp(1.6rem,6vw,2.2rem)}
+.sec-head h2 em{font-style:italic;font-weight:400;color:var(--accent)}
+.row{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px max(18px,env(safe-area-inset-right,0px)) 14px max(18px,env(safe-area-inset-left,0px));margin:0 calc(-1*max(18px,env(safe-area-inset-left,0px))) 0 calc(-1*max(18px,env(safe-area-inset-right,0px)));scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.row::-webkit-scrollbar{display:none}
+.row>*{scroll-snap-align:start;flex:0 0 auto}
+@media (min-width:720px){.row{flex-wrap:wrap;overflow:visible;margin:0;padding:0}.row>*{flex:1 1 260px}}
+
+/* journey cards (paciente) */
+.jcard{width:min(82vw,330px);background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:20px;display:grid;gap:12px;text-align:left;cursor:pointer;color:inherit;position:relative;overflow:hidden}
+.jcard .num{font-family:var(--display);font-style:italic;font-size:3.4rem;line-height:.8;color:var(--accent);position:absolute;right:16px;top:12px;opacity:.5}
+.jcard h3{font-size:1.45rem;padding-right:50px}
+.jcard p{font-size:.92rem;color:var(--muted)}
+.jcard .doc{display:flex;align-items:center;gap:10px;font-size:.86rem}
+.avatar{width:40px;height:40px;border-radius:50%;background:var(--accent);color:#0D112D;display:grid;place-items:center;font-family:var(--display);flex:none;font-size:.95rem}
+.avatar.md{width:48px;height:48px}
+.avatar.lg{width:64px;height:64px;font-size:1.3rem}
+.avatar.xl{width:96px;height:96px}
+.avatar.ph{overflow:hidden;position:relative}
+.avatar.ph img{width:100%;height:100%;object-fit:cover;object-position:50% 12%;display:block;transform:scale(1.15);transform-origin:50% 20%}
+.jcard .cta{font-weight:600;color:var(--accent);font-size:.9rem}
+
+/* procedure cards */
+.pcard{width:min(74vw,290px);background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:18px;display:grid;gap:8px;align-content:start;text-align:left;cursor:pointer;color:inherit;min-height:168px;position:relative}
+.pcard .tag{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600;display:flex;justify-content:space-between;gap:8px}
+.pcard .tag i{font-style:normal;color:var(--accent)}
+.pcard h4{font-size:1.12rem;line-height:1.2}
+.pcard p{font-size:.88rem;color:var(--muted);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.pcard .who{font-size:.8rem;margin-top:auto;display:flex;gap:6px;align-items:center}
+.pcard .who::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent)}
+.pcard.hl{border-color:var(--accent)}
+.grid{display:grid;grid-template-columns:1fr;gap:12px}
+@media (min-width:560px){.grid{grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}}
+.grid .pcard{width:auto}
+
+/* explore */
+.chips{display:flex;gap:8px;overflow-x:auto;padding:4px 0 10px;scrollbar-width:none;position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg)}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;min-height:42px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--fg);padding:8px 16px;font-weight:500;font-size:.9rem;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--navy);color:var(--on-navy);border-color:var(--navy)}
+.search{display:flex;align-items:center;gap:10px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:0 14px;min-height:50px;margin-bottom:12px}
+.search input{border:0;background:transparent;flex:1;font:inherit;font-size:16px;color:var(--fg);min-width:0;outline:none}
+.search svg{flex:none;color:var(--muted)}
+.group{margin-bottom:26px}
+.group h3{font-size:1.3rem;margin-bottom:10px;display:flex;align-items:baseline;gap:10px}
+.group h3 small{font-family:var(--body);font-size:.78rem;color:var(--muted);font-weight:400}
+.empty{color:var(--muted);padding:20px 0}
+
+/* team */
+.team{display:grid;gap:12px}
+@media (min-width:640px){.team{grid-template-columns:1fr 1fr}}
+.tcard{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:20px;display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start}
+.tcard .name{font-family:var(--display);font-size:1.2rem}
+.tcard .role{font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);font-weight:600;margin:2px 0 6px}
+.tcard p{font-size:.9rem;color:var(--muted)}
+
+/* trust & footer */
+.trust{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.trust div{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:14px}
+.trust b{font-family:var(--display);font-weight:500;font-size:1.1rem;display:block}
+.trust span{font-size:.82rem;color:var(--muted)}
+footer{padding-block:26px 30px;font-size:.88rem;color:var(--muted);border-top:1px solid var(--line)}
+footer .wrap{display:grid;gap:14px}
+footer b{color:var(--fg);font-weight:600;display:block}
+.copy{display:inline-flex;gap:8px;align-items:center}
+.copy button{border:1px solid var(--line);background:var(--surface);color:var(--fg);border-radius:8px;padding:4px 10px;font-size:.78rem;cursor:pointer;min-height:32px}
+
+/* ===== BOTTOM TAB BAR ===== */
+.tabbar{position:fixed;left:0;right:0;bottom:0;z-index:30;background:color-mix(in srgb,var(--surface) 92%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--line);padding:6px max(10px,env(safe-area-inset-right,0px)) calc(6px + env(safe-area-inset-bottom,0px)) max(10px,env(safe-area-inset-left,0px));display:grid;grid-template-columns:repeat(4,1fr);gap:4px}
+.tabbar a{display:grid;justify-items:center;gap:3px;text-decoration:none;font-size:.68rem;font-weight:500;color:var(--muted);padding:6px 4px;border-radius:12px;min-height:52px;align-content:center}
+.tabbar a svg{width:22px;height:22px}
+.tabbar a.on{color:var(--fg)}
+.tabbar a.wsp{color:#0D112D;background:var(--accent);font-weight:600}
+
+/* ===== SHEET ===== */
+.scrim{position:fixed;inset:0;background:rgba(13,17,45,.55);z-index:50;opacity:0;pointer-events:none;transition:opacity .25s}
+.scrim.open{opacity:1;pointer-events:auto}
+.sheet{position:fixed;left:0;right:0;bottom:0;z-index:51;background:var(--bg);color:var(--fg);border-radius:24px 24px 0 0;max-height:min(92dvh,92vh);transform:translateY(105%);transition:transform .32s cubic-bezier(.2,.8,.2,1);display:flex;flex-direction:column;box-shadow:0 -20px 60px rgba(0,0,0,.25)}
+.sheet.open{transform:translateY(0)}
+.sheet .grab{width:44px;height:5px;border-radius:3px;background:var(--line);margin:10px auto 0;flex:none}
+.sheet .inner{overflow-y:auto;padding:16px max(18px,env(safe-area-inset-right,0px)) calc(20px + env(safe-area-inset-bottom,0px)) max(18px,env(safe-area-inset-left,0px));display:grid;gap:14px;-webkit-overflow-scrolling:touch}
+.sheet .close{position:absolute;right:14px;top:14px;width:40px;height:40px;border-radius:50%;border:0;background:var(--surface);color:var(--fg);font-size:1.2rem;cursor:pointer;display:grid;place-items:center}
+.sheet h3{font-size:1.7rem;padding-right:44px}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.facts div{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px}
+.facts small{display:block;font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.facts b{font-weight:600;font-size:.9rem}
+.sheet .who{display:flex;gap:10px;align-items:center;font-size:.9rem}
+.sheet .btns{display:grid;gap:8px;margin-top:4px}
+@media (min-width:720px){.sheet{left:50%;right:auto;width:560px;transform:translate(-50%,105%)}.sheet.open{transform:translate(-50%,0)}}
+
+/* ===== RECOMENDADOR ===== */
+.steps{display:flex;gap:6px}
+.steps i{flex:1;height:4px;border-radius:2px;background:var(--line)}
+.steps i.on{background:var(--accent)}
+.opts{display:grid;gap:8px}
+.opt{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:56px;border:1px solid var(--line);background:var(--surface);border-radius:16px;padding:12px 16px;text-align:left;font:inherit;color:var(--fg);cursor:pointer;font-weight:500}
+.opt small{display:block;font-weight:400;color:var(--muted);font-size:.84rem}
+.opt[aria-pressed="true"]{border-color:var(--accent);background:var(--accent-soft)}
+.opt .arrow{color:var(--accent)}
+.opts.two{grid-template-columns:1fr 1fr}
+.result{display:grid;gap:10px}
+.result .pcard{width:auto}
+.result .why{font-size:.88rem;color:var(--muted);border-left:2px solid var(--accent);padding-left:10px}
+.back{background:none;border:0;color:var(--muted);font-weight:500;font-size:.9rem;cursor:pointer;padding:6px 0;justify-self:start;min-height:40px}
+.fab-reco{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(var(--tab-h) + 14px + env(safe-area-inset-bottom,0px));z-index:29;box-shadow:0 12px 30px rgba(13,17,45,.3)}
+.hidden{display:none!important}
+@media (prefers-reduced-motion:reduce){.sheet,.scrim{transition:none}html{scroll-behavior:auto}}
+</style>
+
+</head>
+<body>
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="brandbar"><div class="brand"><b>Bendov</b> Clínica Estética</div><span class="since">Desde 2003</span></div>
+    <h1 id="hero-title">Ya diste el <em>primer paso.</em></h1>
+    <p class="lead" id="hero-lead">Catálogo para nuestros pacientes: lo que mejor complementa lo que ya hiciste, con el mismo equipo médico.</p>
+    <div class="mode" role="group" aria-label="¿Eres paciente?">
+      <button type="button" id="mode-pac" aria-pressed="true">Soy paciente</button>
+      <button type="button" id="mode-new" aria-pressed="false">Es mi primera vez</button>
+    </div>
+    <div class="hero-docs" id="hero-docs"></div>
+    <div class="pillars"><span>Facial</span><span>Corporal</span><span>Ginecoestética</span><span>Bienestar hormonal</span></div>
+  </div>
+</header>
+
+<!-- PACIENTE -->
+<section id="para-ti" class="wrap">
+  <div class="sec-head"><p class="eyebrow">Para ti</p><h2>¿Qué te hiciste? <em>Esto es lo que sigue.</em></h2></div>
+  <div class="row" id="journeys"></div>
+</section>
+
+<!-- PRIMERA VEZ -->
+<section id="primera-vez" class="wrap hidden">
+  <div class="sec-head"><p class="eyebrow">Primera vez</p><h2>Cuéntanos qué quieres mejorar. <em>Te orientamos.</em></h2><p class="muted">Tres preguntas, 30 segundos. Sin dejar tus datos.</p></div>
+  <div class="opts two" id="quick-start"></div>
+  <p class="muted" style="font-size:.86rem;margin-top:14px">Toda recomendación se confirma en una evaluación médica gratuita, presencial u online.</p>
+</section>
+
+<section id="destacados" class="wrap">
+  <div class="sec-head"><p class="eyebrow">Más solicitados</p><h2>Lo que más <em>nos piden</em></h2></div>
+  <div class="row" id="featured"></div>
+</section>
+
+<section id="explorar" class="wrap">
+  <div class="sec-head"><p class="eyebrow">Catálogo completo</p><h2>Explora por <em>especialidad</em></h2></div>
+  <div class="search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="q" type="search" placeholder="Buscar: botox, papada, lipo, labioplastia…" autocomplete="off" aria-label="Buscar procedimiento"></div>
+  <div class="chips" id="chips"></div>
+  <div id="catalog"></div>
+</section>
+
+<section id="equipo" class="wrap">
+  <div class="sec-head"><p class="eyebrow">Equipo médico</p><h2>Dos médicos, <em>cuatro especialidades</em></h2></div>
+  <div class="team" id="team"></div>
+</section>
+
+<section class="wrap">
+  <div class="trust">
+    <div><b>12 cuotas</b><span>sin interés, en todos los procedimientos</span></div>
+    <div><b>Evaluación gratis</b><span>presencial u online, con el médico tratante</span></div>
+    <div><b>Pabellón propio</b><span>autorizado por la SEREMI de Salud</span></div>
+    <div><b>20+ años</b><span>insumos de primeras marcas y seguimiento incluido</span></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><b>Bendov Clínica Estética</b>El Trovador 4280, oficina 410, Las Condes · Estacionamiento</div>
+    <div><b>Horarios</b>Lun–Jue 9:00–13:30 · 15:00–19:00 · Vie hasta 18:30 · Sáb 10:00–12:00</div>
+    <div><b>Contacto</b><span class="copy">+56 9 3394 3090 <button type="button" id="copy-phone">Copiar</button></span><br><a href="https://www.instagram.com/clinicabendov" target="_blank" rel="noopener">@clinicabendov</a> · <a href="https://www.clinicabendov.cl" target="_blank" rel="noopener">clinicabendov.cl</a></div>
+  </div>
+</footer>
+
+<button type="button" class="btn btn-navy fab-reco hidden" id="fab-reco">✦ Recomiéndame</button>
+
+<nav class="tabbar" aria-label="Secciones">
+  <a href="#top" data-tab="top" class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 11 12 4l9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>Inicio</a>
+  <a href="#explorar" data-tab="explorar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>Explorar</a>
+  <a href="#equipo" data-tab="equipo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><circle cx="17" cy="9" r="2.5"/><path d="M15.5 14.5a5 5 0 0 1 6 5"/></svg>Equipo</a>
+  <a href="#" id="tab-wsp" class="wsp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 18.7z"/><path d="M9 10c0 3 2 5 5 5l1.5-1.5-2-1-1 1a4 4 0 0 1-2-2l1-1-1-2z"/></svg>Agendar</a>
+</nav>
+
+<div class="scrim" id="scrim"></div>
+<div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-title"><div class="grab"></div><button type="button" class="close" id="sheet-close" aria-label="Cerrar">✕</button><div class="inner" id="sheet-body"></div></div>
+
+<script>
+const PHONE = '56933943090';
+const DOCS = {
+  bendov:  {ini:'DB', photo:'img/dr-bendov.png', name:'Dr. David Bendov',    short:'Dr. Bendov',  role:'Director médico · Corporal, ginecoestética y hormonal', bio:'Lipo Vaser, lipotransferencia, endoláser facial y corporal, hilos, láser CO2, cirugías faciales, ginecoestética y LifeChip. Más de 20 años en medicina estética.'},
+  colodro: {ini:'MC', photo:'img/dra-colodro.png', name:'Dra. Myriam Colodro', short:'Dra. Colodro', role:'Armonización facial', bio:'Toxina botulínica, rellenos y bioestimuladores, skin quality, exosomas, polinucleótidos y PRP facial. Resultados naturales, sin cirugía.'},
+};
+const CATS = [
+  {id:'facial', name:'Facial', long:'Armonización facial', sub:'Rostro natural, descansado y en armonía'},
+  {id:'corporal', name:'Corporal', long:'Corporal', sub:'Contorno, grasa localizada y firmeza'},
+  {id:'gineco', name:'Ginecoestética', long:'Ginecoestética', sub:'Salud, confort y estética íntima'},
+  {id:'hormonal', name:'Hormonal', long:'Bienestar hormonal', sub:'LifeChip: energía, sueño, ánimo y libido'},
+];
+const TIPO = {Q:'Quirúrgico', MI:'Mínimamente invasivo', NQ:'Sin cirugía'};
+// facts por defecto según tipo; cada procedimiento puede sobreescribir con dur/rec/res
+const FACTS = {Q:{dur:'1–3 h',rec:'7–14 días',res:'Definitivo'}, MI:{dur:'45–90 min',rec:'2–5 días',res:'3–6 meses en consolidar'}, NQ:{dur:'15–40 min',rec:'Inmediata',res:'Progresivo'}};
+// tags del recomendador: zona (rostro/cuerpo/intimo/bienestar) + concern + sexo (h/m/ambos)
+const PROCS = [
+ // FACIAL — ambos
+ {id:'p-toxina', cat:'facial', tipo:'NQ', doc:'ambos', hl:true, name:'Toxina botulínica (Botox® / Dysport®)', desc:'Suaviza arrugas de expresión en frente, entrecejo y patas de gallo; también cuello, mentón, bruxismo y sonrisa gingival. Resultado natural en 7 a 10 días, dura 4 a 6 meses.', dur:'15 min', rec:'Inmediata', res:'4–6 meses', tags:['rostro','arrugas','hombre']},
+ {id:'p-glowtox', cat:'facial', tipo:'NQ', doc:'ambos', name:'GlowTox', desc:'Microdosis de toxina en toda la piel del rostro para afinar poros, controlar brillo y dar efecto piel de porcelana.', tags:['rostro','piel']},
+ {id:'p-rellenos', cat:'facial', tipo:'NQ', doc:'ambos', hl:true, name:'Rellenos faciales con ácido hialurónico', desc:'Restaura volumen y contorno en pómulos, ojeras, mentón, tercio medio o labios. Armonización full, intermedia o por zona.', dur:'30–45 min', rec:'1–2 días', res:'12–18 meses', tags:['rostro','volumen','ojeras']},
+ {id:'p-labios', cat:'facial', tipo:'NQ', doc:'ambos', name:'Armonización labial', desc:'Volumen, definición e hidratación de labios con resultado proporcionado al rostro.', tags:['rostro','volumen']},
+ {id:'p-rinomodelacion', cat:'facial', tipo:'NQ', doc:'ambos', name:'Rinomodelación', desc:'Corrección estética de la nariz con rellenos, sin cirugía.', tags:['rostro','contorno']},
+ {id:'p-perfilado', cat:'facial', tipo:'NQ', doc:'ambos', name:'Perfilado mandibular y bioplastia de mentón', desc:'Define el contorno de la mandíbula y proyecta el mentón para estructurar el tercio inferior del rostro.', tags:['rostro','contorno','hombre']},
+ {id:'p-pomulos', cat:'facial', tipo:'NQ', doc:'ambos', name:'Bioplastia de pómulos', desc:'Realza pómulos y devuelve soporte al rostro.', tags:['rostro','volumen']},
+ {id:'p-sculptra', cat:'facial', tipo:'NQ', doc:'ambos', name:'Bioestimuladores de colágeno (Sculptra®, Radiesse®, Nucleofill)', desc:'Mejoran firmeza y calidad de la piel de forma progresiva y duradera estimulando tu propio colágeno.', res:'Hasta 2 años', tags:['rostro','flacidez','piel']},
+ {id:'p-skinvive', cat:'facial', tipo:'NQ', doc:'ambos', hl:true, name:'Skin quality: Skinvive®, Profhilo®, Skinbooster, Redensity', desc:'Microinyecciones de ácido hialurónico que mejoran hidratación, luminosidad y textura sin cambiar tus rasgos.', dur:'20 min', rec:'Inmediata', res:'6–9 meses', tags:['rostro','piel','hombre']},
+ {id:'p-mesoterapia', cat:'facial', tipo:'NQ', doc:'ambos', name:'Mesoterapia y mesolifting', desc:'Cócteles revitalizantes (Pink Glow, Dorada, Plateada, Elástica, NOVUMA) para luminosidad, textura y vitalidad de la piel.', tags:['rostro','piel']},
+ {id:'p-prp-facial', cat:'facial', tipo:'NQ', doc:'ambos', name:'PRP facial', desc:'Plasma rico en plaquetas: tus propios factores de crecimiento para regenerar la piel.', tags:['rostro','piel']},
+ {id:'p-hialuronidasa', cat:'facial', tipo:'NQ', doc:'ambos', name:'Hialuronidasa y enzimas recombinantes', desc:'Corrección o disolución de rellenos previos y tratamiento de acúmulos de grasa localizada.', tags:['rostro']},
+ // FACIAL — Colodro
+ {id:'p-botox-full', cat:'facial', tipo:'NQ', doc:'colodro', name:'Botox Full Face', desc:'Tratamiento completo de tercio superior, medio e inferior en una sola sesión para un rostro armónico y descansado.', dur:'25 min', rec:'Inmediata', res:'4–6 meses', tags:['rostro','arrugas']},
+ {id:'p-exosomas', cat:'facial', tipo:'NQ', doc:'colodro', hl:true, name:'Exosomas', desc:'Terapia regenerativa de última generación que repara y rejuvenece la piel. 1 o 3 sesiones.', tags:['rostro','piel']},
+ {id:'p-polinucleotidos', cat:'facial', tipo:'NQ', doc:'colodro', name:'Polinucleótidos', desc:'Tratamiento regenerativo para calidad y elasticidad de la piel en rostro, cuello y ojeras.', tags:['rostro','piel','ojeras']},
+ // FACIAL — Bendov
+ {id:'p-harmonyca', cat:'facial', tipo:'NQ', doc:'bendov', name:'HarmonyCa® (bioestimulador híbrido)', desc:'Volumen inmediato más estimulación de colágeno a largo plazo en una sola sesión.', tags:['rostro','flacidez','volumen']},
+ {id:'p-hilos', cat:'facial', tipo:'MI', doc:'bendov', name:'Hilos tensores y bioestimulantes', desc:'Tensan la piel y redefinen el óvalo facial: foxy eyes, entrecejo, párpado inferior, cuello.', res:'12–18 meses', tags:['rostro','flacidez']},
+ {id:'p-laser-co2', cat:'facial', tipo:'MI', doc:'bendov', name:'Láser facial CO2 fraccionado', desc:'Renueva la piel: textura, manchas, poros y cicatrices de acné. 1 o 3 sesiones.', rec:'5–7 días', tags:['rostro','piel','manchas']},
+ {id:'p-endolaser-facial', cat:'facial', tipo:'MI', doc:'bendov', hl:true, name:'Endoláser facial', desc:'Fibra láser que reduce papada y redefine mandíbula y cuello sin cirugía. Por tercios, papada, cervical o full. Incluye controles y 10 sesiones post.', dur:'60–90 min', rec:'3–5 días', res:'Definitivo', tags:['rostro','papada','flacidez','hombre']},
+ {id:'p-blefaroplastia', cat:'facial', tipo:'Q', doc:'bendov', name:'Blefaroplastia', desc:'Rejuvenece la mirada eliminando exceso de piel o bolsas en párpados superiores e inferiores (2 o 4 párpados).', tags:['rostro','ojeras','flacidez','hombre']},
+ {id:'p-bichectomia', cat:'facial', tipo:'Q', doc:'bendov', name:'Bichectomía', desc:'Retiro de las bolsas de Bichat para afinar el rostro y resaltar pómulos.', tags:['rostro','contorno']},
+ {id:'p-cirugias-faciales', cat:'facial', tipo:'Q', doc:'bendov', name:'Lobuloplastia, otoplastia, cervicoplastia e implante de mentón', desc:'Cirugías faciales menores con anestesia local: lóbulo de oreja, orejas, cuello y proyección del mentón.', tags:['rostro','contorno']},
+ // CORPORAL
+ {id:'p-lipo-vaser', cat:'corporal', tipo:'Q', doc:'bendov', hl:true, name:'Liposucción Vaser', desc:'Ultrasonido que licúa la grasa antes de extraerla: contorno preciso, menos trauma y mejor retracción. De 1 a 7 zonas o 360°. Incluye sedación consciente, controles, faja y 12 sesiones post.', dur:'2–3 h', rec:'5–7 días', res:'Definitivo', tags:['cuerpo','grasa','hombre']},
+ {id:'p-minilipo', cat:'corporal', tipo:'MI', doc:'bendov', hl:true, name:'Lipo por zona (Minilipo)', desc:'Liposucción de una zona con anestesia local: abdomen, laterales, papada, brazos, espalda o pectorales. De vuelta a tu rutina en pocos días.', dur:'60–90 min', rec:'2–3 días', res:'Definitivo', tags:['cuerpo','grasa','papada','hombre']},
+ {id:'p-lipo-retraccion', cat:'corporal', tipo:'Q', doc:'bendov', name:'Lipo Retraction', desc:'Liposucción combinada con tecnología de retracción para piel con flacidez leve a moderada. 1 a 4 zonas.', tags:['cuerpo','grasa','flacidez']},
+ {id:'p-marcacion', cat:'corporal', tipo:'Q', doc:'bendov', name:'Marcación abdominal', desc:'Liposucción de alta definición que marca la musculatura abdominal.', tags:['cuerpo','grasa','hombre']},
+ {id:'p-ginecomastia', cat:'corporal', tipo:'Q', doc:'bendov', name:'Ginecomastia y Lipo Vaser pectoral', desc:'Reduce el volumen mamario masculino (grasa y/o glándula) y define el pecho. Uno de los procedimientos más solicitados por hombres.', tags:['cuerpo','pecho','hombre','soloH']},
+ {id:'p-lipotransferencia', cat:'corporal', tipo:'Q', doc:'bendov', name:'Lipotransferencia y lipoinjerto glúteo', desc:'Tu propia grasa, purificada, para dar volumen y forma a glúteos, caderas o rostro.', tags:['cuerpo','volumen']},
+ {id:'p-endolaser-corporal', cat:'corporal', tipo:'MI', doc:'bendov', name:'Endoláser corporal', desc:'Fibra láser bajo la piel que reduce grasa localizada y tensa el tejido sin cirugía mayor. Abdomen, espalda, periumbilical.', tags:['cuerpo','grasa','flacidez','hombre']},
+ {id:'p-dermolipectomia', cat:'corporal', tipo:'Q', doc:'bendov', name:'Dermolipectomía y resección de asas', desc:'Elimina el exceso de piel abdominal o de los flancos tras bajas de peso o lipo.', tags:['cuerpo','flacidez']},
+ {id:'p-cellusculpt', cat:'corporal', tipo:'MI', doc:'bendov', name:'Cellusculpt Pro (celulitis)', desc:'Subcisión de los tabiques que forman los hoyuelos más bioestimulador de colágeno. 1 a 4 viales.', tags:['cuerpo','celulitis']},
+ {id:'p-hiperhidrosis', cat:'corporal', tipo:'NQ', doc:'bendov', name:'Hiperhidrosis con toxina botulínica', desc:'Controla la sudoración excesiva en axilas o manos por 6 a 9 meses.', dur:'20 min', rec:'Inmediata', res:'6–9 meses', tags:['cuerpo','sudor','hombre']},
+ {id:'p-laser-estrias', cat:'corporal', tipo:'MI', doc:'bendov', name:'Láser CO2 para estrías y cicatrices', desc:'Mejora textura y color de estrías, cicatrices y zona periumbilical. Incluye plastia de cicatriz.', tags:['cuerpo','piel']},
+ {id:'p-rf-corporal', cat:'corporal', tipo:'NQ', doc:'bendov', name:'Radiofrecuencia corporal', desc:'Calor controlado que estimula colágeno y mejora la firmeza de la piel. Ideal tras una lipo.', tags:['cuerpo','flacidez']},
+ {id:'p-carboxi', cat:'corporal', tipo:'NQ', doc:'bendov', name:'Carboxiterapia, drenaje y ultrasonido', desc:'Terapias post-procedimiento y de mantención: circulación, calidad de piel y recuperación. Botas vasopresoras y cámara hiperbárica.', tags:['cuerpo','celulitis']},
+ {id:'p-menores', cat:'corporal', tipo:'Q', doc:'bendov', name:'Lipomas, lunares, nevus y quistes', desc:'Extracción con anestesia local y cierre estético.', tags:['cuerpo','piel']},
+ // GINECO
+ {id:'p-labioplastia', cat:'gineco', tipo:'Q', doc:'bendov', hl:true, name:'Labioplastia láser', desc:'Corrige tamaño, forma o asimetría de los labios menores con láser: menos sangrado y recuperación rápida. Incluye controles.', dur:'60 min', rec:'5–7 días', res:'Definitivo', tags:['intimo','forma','soloM']},
+ {id:'p-laser-vaginal', cat:'gineco', tipo:'NQ', doc:'bendov', hl:true, name:'Láser íntimo CO2 (rejuvenecimiento vaginal)', desc:'Mejora elasticidad, lubricación e incontinencia leve sin cirugía. 1 o 3 sesiones.', dur:'20 min', rec:'Inmediata', res:'12+ meses', tags:['intimo','salud','soloM']},
+ {id:'p-vaginoplastia', cat:'gineco', tipo:'Q', doc:'bendov', name:'Vaginoplastia', desc:'Recupera la tonicidad vaginal tras partos o cambios por la edad.', tags:['intimo','salud','soloM']},
+ {id:'p-lifting-labios', cat:'gineco', tipo:'Q', doc:'bendov', name:'Lifting de labios mayores', desc:'Corrige flacidez y exceso de piel en labios mayores.', tags:['intimo','forma','soloM']},
+ {id:'p-prp-vaginal', cat:'gineco', tipo:'NQ', doc:'bendov', name:'PRP íntimo y mesoterapia vaginal', desc:'Regenera los tejidos íntimos con tu propio plasma o cócteles Elástica. Complementa el láser.', tags:['intimo','salud','soloM']},
+ {id:'p-hilos-vaginales', cat:'gineco', tipo:'MI', doc:'bendov', name:'Hilos tensores y bioestimulantes vaginales', desc:'Tensan y estimulan colágeno en los tejidos íntimos sin cirugía.', tags:['intimo','salud','soloM']},
+ {id:'p-punto-g', cat:'gineco', tipo:'NQ', doc:'bendov', name:'Relleno de punto G', desc:'Con ácido hialurónico o grasa propia, para mejorar la sensibilidad.', tags:['intimo','salud','soloM']},
+ {id:'p-control-gine', cat:'gineco', tipo:'NQ', doc:'bendov', name:'Consulta ginecológica, PAP y DIU', desc:'Evaluación ginecológica integral, Papanicolaou y extracción de DIU. También puerta de entrada a la ginecoestética.', tags:['intimo','salud','soloM']},
+ // HORMONAL
+ {id:'p-lifechip', cat:'hormonal', tipo:'MI', doc:'bendov', hl:true, name:'LifeChip (pellet de testosterona)', desc:'Pellets de testosterona bioidéntica bajo la piel que liberan la dosis de forma constante por 4 a 6 meses. Para hombres y mujeres con síntomas de déficit hormonal.', dur:'15 min', rec:'Inmediata', res:'4–6 meses', tags:['bienestar','energia','libido','hombre']},
+ {id:'p-lifechip-examenes', cat:'hormonal', tipo:'NQ', doc:'bendov', hl:true, name:'Evaluación LifeChip y órdenes de exámenes', desc:'Sin costo. Pide tus órdenes, hazte los exámenes y revisa los resultados con el Dr. Bendov.', dur:'20 min', rec:'—', res:'Diagnóstico', tags:['bienestar','energia','hombre']},
+ {id:'p-lifechip-mujer', cat:'hormonal', tipo:'MI', doc:'bendov', name:'LifeChip Mujer', desc:'Energía, ánimo, sueño, libido y masa muscular en perimenopausia y menopausia. Dosis según exámenes.', tags:['bienestar','energia','libido','soloM']},
+ {id:'p-lifechip-hombre', cat:'hormonal', tipo:'MI', doc:'bendov', name:'LifeChip Hombre', desc:'Energía, rendimiento, concentración y composición corporal. Dosis según exámenes.', tags:['bienestar','energia','libido','soloH','hombre']},
+];
+const JOURNEYS = [
+ {id:'post-lipo', num:'01', title:'Me hice una lipo', text:'El cuerpo ya cambió. El rostro es lo primero que la gente nota. Los primeros 3 meses post-lipo son el momento ideal.', doc:'colodro', recs:['p-toxina','p-skinvive','p-exosomas','p-endolaser-facial','p-lipotransferencia','p-cellusculpt'], cta:'Evaluación facial de cortesía', wsp:'Hola, soy paciente de lipo y quiero agendar mi evaluación facial de cortesía con la Dra. Colodro'},
+ {id:'post-facial', num:'02', title:'Me hice un tratamiento facial', text:'Quienes cuidan su rostro suelen tener una zona del cuerpo que les incomoda. Una evaluación corporal sin costo lo resuelve en 20 minutos.', doc:'bendov', recs:['p-minilipo','p-lipo-vaser','p-endolaser-corporal','p-lifechip','p-laser-vaginal','p-prp-facial'], cta:'Evaluación corporal sin costo', wsp:'Hola, soy paciente de tratamientos faciales y quiero una evaluación corporal sin costo'},
+ {id:'post-lifechip', num:'03', title:'Uso LifeChip', text:'Te sientes mejor. Ahora, verte como te sientes. Aprovecha la cita de recarga para resolver lo que llevas tiempo postergando.', doc:'bendov', recs:['p-lifechip-examenes','p-toxina','p-minilipo','p-ginecomastia','p-endolaser-facial','p-hiperhidrosis'], cta:'Pide tus órdenes de exámenes sin costo', wsp:'Hola, uso LifeChip y quiero pedir mis órdenes de exámenes y coordinar mi próxima recarga'},
+];
+// Recomendador: zona -> inquietudes
+const RECO = {
+  rostro:   {label:'Mi rostro', sub:'Arrugas, papada, piel, volumen', concerns:{arrugas:'Arrugas y líneas de expresión', papada:'Papada y contorno de mandíbula', piel:'Calidad de la piel, manchas, luminosidad', flacidez:'Flacidez y caída del rostro', ojeras:'Ojeras y mirada cansada', volumen:'Volumen en labios, pómulos o mentón', contorno:'Nariz, mentón o perfil'}},
+  cuerpo:   {label:'Mi cuerpo', sub:'Grasa localizada, flacidez, celulitis', concerns:{grasa:'Grasa localizada que no se va', flacidez:'Flacidez o piel sobrante', celulitis:'Celulitis', pecho:'Pecho masculino (ginecomastia)', sudor:'Sudoración excesiva', volumen:'Más volumen en glúteos', piel:'Estrías o cicatrices'}},
+  intimo:   {label:'Zona íntima', sub:'Salud, confort y estética', concerns:{forma:'Forma o tamaño de los labios', salud:'Sequedad, laxitud o pérdidas de orina leves'}},
+  bienestar:{label:'Energía y bienestar', sub:'Cansancio, sueño, libido, ánimo', concerns:{energia:'Cansancio, falta de energía o concentración', libido:'Libido baja o cambios de ánimo'}},
+};
+
+// ---- origen / whatsapp
+const SOURCES = {pantalla:'pantalla sala de espera', salapost:'sala post', wsp:'WhatsApp', isabel:'Isabel', ig:'Instagram'};
+let source = '';
+const readSource = () => { const h=(location.hash||'').slice(1); if (SOURCES[h]) source=h; };
+readSource(); addEventListener('hashchange', readSource);
+const wsp = (t) => `https://wa.me/${PHONE}?text=${encodeURIComponent(t + (source ? ` (vi esto en ${SOURCES[source]})` : ''))}`;
+const esc = (s) => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const who = (p) => p.doc==='ambos' ? `${DOCS.colodro.short} · ${DOCS.bendov.short}` : DOCS[p.doc].name;
+const av = (d, cls='') => d.photo ? `<span class="avatar ${cls} ph"><img src="${d.photo}" alt="${d.name}" loading="lazy"></span>` : `<span class="avatar ${cls}">${d.ini}</span>`;
+const byId = Object.fromEntries(PROCS.map(p => [p.id, p]));
+const catOf = (id) => CATS.find(c => c.id===id);
+
+// ---- modo paciente / primera vez
+let mode = 'pac';
+function setMode(m){
+  mode = m;
+  document.getElementById('mode-pac').setAttribute('aria-pressed', m==='pac');
+  document.getElementById('mode-new').setAttribute('aria-pressed', m==='new');
+  document.getElementById('para-ti').classList.toggle('hidden', m!=='pac');
+  document.getElementById('primera-vez').classList.toggle('hidden', m!=='new');
+  document.getElementById('fab-reco').classList.toggle('hidden', m!=='new');
+  document.getElementById('hero-title').innerHTML = m==='pac' ? 'Ya diste el <em>primer paso.</em>' : 'Empecemos por <em>lo que buscas.</em>';
+  document.getElementById('hero-lead').textContent = m==='pac' ? 'Catálogo para nuestros pacientes: lo que mejor complementa lo que ya hiciste, con el mismo equipo médico.' : 'Cuatro especialidades, dos médicos y una evaluación gratuita para orientarte sin compromiso.';
+  const wtext = m==='pac' ? 'Hola, soy paciente de la clínica y quiero agendar' : 'Hola, quiero agendar una evaluación gratuita';
+  document.getElementById('tab-wsp').href = wsp(wtext);
+  try { localStorage.setItem('bendov-mode', m); } catch(e){}
+  window.track && track('modo', {modo: m});
+}
+document.getElementById('mode-pac').onclick = () => setMode('pac');
+document.getElementById('mode-new').onclick = () => setMode('new');
+
+// ---- render helpers
+function pcard(p, extra=''){
+  return `<button type="button" class="pcard ${p.hl?'hl':''}" data-open="${p.id}"><div class="tag"><span>${TIPO[p.tipo]}</span><i>${catOf(p.cat).name}</i></div><h4>${esc(p.name)}</h4><p>${esc(p.desc)}</p><div class="who">${who(p)}</div>${extra}</button>`;
+}
+document.getElementById('journeys').innerHTML = JOURNEYS.map(j => `
+  <button type="button" class="jcard" data-journey="${j.id}"><span class="num">${j.num}</span><h3>${j.title}</h3><p>${j.text}</p>
+  <div class="doc">${av(DOCS[j.doc],"md")}<div><b>${DOCS[j.doc].name}</b><br><span class="muted">${DOCS[j.doc].role.split('·')[0]}</span></div></div>
+  <span class="cta">${j.cta} →</span></button>`).join('');
+document.getElementById('hero-docs').innerHTML = `<div class="stack">${av(DOCS.bendov,'md')}${av(DOCS.colodro,'md')}</div><span class="t"><b>Dr. David Bendov</b> y <b>Dra. Myriam Colodro</b></span>`;
+document.getElementById('featured').innerHTML = PROCS.filter(p => p.hl).map(p => pcard(p)).join('');
+document.getElementById('team').innerHTML = Object.values(DOCS).map(d => `<div class="tcard">${av(d,"xl")}<div><div class="name">${d.name}</div><div class="role">${d.role}</div><p>${d.bio}</p></div></div>`).join('');
+document.getElementById('quick-start').innerHTML = Object.entries(RECO).map(([k,v]) => `<button type="button" class="opt" data-zone="${k}"><span>${v.label}<small>${v.sub}</small></span><span class="arrow">→</span></button>`).join('');
+
+// ---- explorar
+let filter = 'all', query = '';
+const chips = document.getElementById('chips'), catalog = document.getElementById('catalog');
+function renderExplore(){
+  chips.innerHTML = [{id:'all',name:'Todo'},...CATS].map(c => `<button type="button" class="chip" aria-pressed="${filter===c.id}" data-f="${c.id}">${c.name}</button>`).join('');
+  const q = query.trim().toLowerCase();
+  const groups = CATS.filter(c => filter==='all' || c.id===filter).map(c => {
+    const items = PROCS.filter(p => p.cat===c.id && (!q || (p.name+' '+p.desc+' '+p.tags.join(' ')).toLowerCase().includes(q)));
+    return items.length ? `<div class="group" id="cat-${c.id}"><h3>${c.long} <small>${items.length}</small></h3><div class="grid">${items.map(p=>pcard(p)).join('')}</div></div>` : '';
+  }).join('');
+  catalog.innerHTML = groups || `<p class="empty">No encontramos "${esc(query)}". Escríbenos por WhatsApp y te orientamos.</p>`;
+}
+chips.addEventListener('click', e => { const b=e.target.closest('.chip'); if(!b) return; filter=b.dataset.f; renderExplore(); window.track && track('tab_click',{categoria:filter}); });
+document.getElementById('q').addEventListener('input', e => { query=e.target.value; renderExplore(); if (query.length>2) { clearTimeout(window._qt); window._qt=setTimeout(()=>window.track && track('busqueda',{termino:query}),800);} });
+renderExplore();
+
+// ---- sheet
+const sheet = document.getElementById('sheet'), scrim = document.getElementById('scrim'), sbody = document.getElementById('sheet-body');
+function openSheet(html){ sbody.innerHTML = html; sheet.classList.add('open'); scrim.classList.add('open'); document.body.style.overflow='hidden'; sbody.scrollTop=0; }
+function closeSheet(){ sheet.classList.remove('open'); scrim.classList.remove('open'); document.body.style.overflow=''; }
+scrim.onclick = closeSheet; document.getElementById('sheet-close').onclick = closeSheet;
+addEventListener('keydown', e => { if (e.key==='Escape') closeSheet(); });
+// swipe down para cerrar
+let ty0=null; sheet.addEventListener('touchstart', e => { if (sbody.scrollTop<=0) ty0=e.touches[0].clientY; }, {passive:true});
+sheet.addEventListener('touchmove', e => { if (ty0!==null && e.touches[0].clientY-ty0>90) { ty0=null; closeSheet(); } }, {passive:true});
+sheet.addEventListener('touchend', () => ty0=null);
+
+function openProc(id, ctx){
+  const p = byId[id]; if (!p) return;
+  const f = Object.assign({}, FACTS[p.tipo], {dur:p.dur, rec:p.rec, res:p.res});
+  const docs = p.doc==='ambos' ? [DOCS.colodro, DOCS.bendov] : [DOCS[p.doc]];
+  openSheet(`
+    <p class="eyebrow">${catOf(p.cat).long} · ${TIPO[p.tipo]}</p>
+    <h3 id="sheet-title">${esc(p.name)}</h3>
+    <p>${esc(p.desc)}</p>
+    <div class="facts"><div><small>Duración</small><b>${f.dur||FACTS[p.tipo].dur}</b></div><div><small>Recuperación</small><b>${f.rec||FACTS[p.tipo].rec}</b></div><div><small>Resultado</small><b>${f.res||FACTS[p.tipo].res}</b></div></div>
+    ${docs.map(d => `<div class="who">${av(d,"md")}<div><b>${d.name}</b><br><span class="muted">${d.role}</span></div></div>`).join('')}
+    <p class="muted" style="font-size:.86rem">Hasta 12 cuotas sin interés. Evaluación previa gratuita, presencial u online.</p>
+    <div class="btns"><a class="btn btn-gold" target="_blank" rel="noopener" data-wsp-proc="${esc(p.name)}" href="${wsp(`Hola, quiero información y agendar evaluación para ${p.name}`)}">Agendar evaluación por WhatsApp</a><button type="button" class="btn btn-line" data-close>Seguir mirando</button></div>`);
+  window.track && track('procedimiento_abierto', {procedimiento:p.name, categoria:p.cat, contexto:ctx||'catalogo'});
+}
+function openJourney(id){
+  const j = JOURNEYS.find(x => x.id===id); const d = DOCS[j.doc];
+  openSheet(`
+    <p class="eyebrow">Para ti · ${j.title}</p>
+    <h3 id="sheet-title">${j.cta}</h3>
+    <p>${j.text}</p>
+    <div class="who">${av(d,"md")}<div><b>${d.name}</b><br><span class="muted">${d.role}</span></div></div>
+    <a class="btn btn-gold" target="_blank" rel="noopener" href="${wsp(j.wsp)}" data-wsp-journey="${j.id}">Agendar por WhatsApp</a>
+    <p class="eyebrow" style="margin-top:6px">Lo que suele venir después</p>
+    <div class="result">${j.recs.map(r => pcard(byId[r])).join('')}</div>`);
+  window.track && track('journey_click', {journey:id});
+}
+
+// ---- recomendador
+const R = {zone:null, concern:null, pref:null};
+function recoStep(step){
+  const z = RECO[R.zone];
+  const bar = `<div class="steps">${[1,2,3].map(i=>`<i class="${i<=step?'on':''}"></i>`).join('')}</div>`;
+  if (step===1) return openSheet(`${bar}<p class="eyebrow">Paso 1 de 3</p><h3 id="sheet-title">¿Qué quieres mejorar?</h3><div class="opts">${Object.entries(RECO).map(([k,v])=>`<button type="button" class="opt" data-zone="${k}" aria-pressed="${R.zone===k}"><span>${v.label}<small>${v.sub}</small></span><span class="arrow">→</span></button>`).join('')}</div>`);
+  if (step===2) return openSheet(`${bar}<button type="button" class="back" data-step="1">← Volver</button><p class="eyebrow">Paso 2 de 3 · ${z.label}</p><h3 id="sheet-title">¿Qué es lo que más te incomoda?</h3><div class="opts">${Object.entries(z.concerns).map(([k,v])=>`<button type="button" class="opt" data-concern="${k}" aria-pressed="${R.concern===k}"><span>${v}</span><span class="arrow">→</span></button>`).join('')}</div>`);
+  if (step===3) return openSheet(`${bar}<button type="button" class="back" data-step="2">← Volver</button><p class="eyebrow">Paso 3 de 3</p><h3 id="sheet-title">¿Qué prefieres?</h3><div class="opts"><button type="button" class="opt" data-pref="NQ"><span>Sin cirugía<small>Sesiones cortas, sin recuperación</small></span><span class="arrow">→</span></button><button type="button" class="opt" data-pref="MI"><span>Mínimamente invasivo<small>Anestesia local, pocos días de recuperación</small></span><span class="arrow">→</span></button><button type="button" class="opt" data-pref="any"><span>Lo que dé mejor resultado<small>Incluye opciones quirúrgicas</small></span><span class="arrow">→</span></button></div>`);
+}
+function recoResult(){
+  const rank = {NQ:0, MI:1, Q:2};
+  let pool = PROCS.filter(p => p.tags.includes(R.zone) && p.tags.includes(R.concern));
+  if (!pool.length) pool = PROCS.filter(p => p.tags.includes(R.zone));
+  const pref = R.pref;
+  pool.sort((a,b) => {
+    const pa = pref==='any' ? (a.hl?-1:0) : (a.tipo===pref ? -2 : rank[a.tipo]===rank[pref]+1 ? -1 : 0);
+    const pb = pref==='any' ? (b.hl?-1:0) : (b.tipo===pref ? -2 : rank[b.tipo]===rank[pref]+1 ? -1 : 0);
+    return pa - pb || (b.hl?1:0) - (a.hl?1:0);
+  });
+  const top = pool.slice(0,3);
+  const z = RECO[R.zone], cname = z.concerns[R.concern];
+  const why = {NQ:'Priorizamos opciones sin cirugía, con sesiones cortas y sin tiempo de recuperación.', MI:'Priorizamos opciones mínimamente invasivas: anestesia local y pocos días de recuperación.', any:'Ordenadas por resultado: incluimos la opción quirúrgica cuando es la que mejor resuelve esto.'}[pref];
+  const alt = pool.slice(3,6);
+  openSheet(`<div class="steps"><i class="on"></i><i class="on"></i><i class="on"></i></div><button type="button" class="back" data-step="3">← Cambiar preferencia</button>
+    <p class="eyebrow">Tu orientación · ${z.label}</p><h3 id="sheet-title">Para "${cname.toLowerCase()}", esto es lo que haríamos</h3>
+    <p class="why">${why} La indicación final la da el médico en la evaluación gratuita.</p>
+    <div class="result">${top.map(p=>pcard(p)).join('')}</div>
+    <a class="btn btn-gold" target="_blank" rel="noopener" data-wsp-reco="1" href="${wsp(`Hola, es mi primera vez. Me interesa mejorar: ${cname.toLowerCase()}. Opciones que vi: ${top.map(p=>p.name).join(', ')}. Quiero agendar una evaluación gratuita`)}">Agendar evaluación gratuita</a>
+    ${alt.length?`<p class="eyebrow" style="margin-top:6px">También podrías considerar</p><div class="result">${alt.map(p=>pcard(p)).join('')}</div>`:''}`);
+  window.track && track('recomendacion_resultado', {zona:R.zone, inquietud:R.concern, preferencia:pref, top: top.map(p=>p.name).join(' | ')});
+}
+document.getElementById('fab-reco').onclick = () => { R.zone=R.concern=R.pref=null; recoStep(1); };
+
+// ---- delegación global
+document.addEventListener('click', e => {
+  const t = e.target;
+  const open = t.closest('[data-open]'); if (open) return openProc(open.dataset.open, sheet.classList.contains('open') ? 'sheet' : 'catalogo');
+  const j = t.closest('[data-journey]'); if (j) return openJourney(j.dataset.journey);
+  if (t.closest('[data-close]')) return closeSheet();
+  const z = t.closest('[data-zone]'); if (z) { R.zone=z.dataset.zone; R.concern=null; return recoStep(2); }
+  const c = t.closest('[data-concern]'); if (c) { R.concern=c.dataset.concern; return recoStep(3); }
+  const p = t.closest('[data-pref]'); if (p) { R.pref=p.dataset.pref; return recoResult(); }
+  const s = t.closest('[data-step]'); if (s) return recoStep(+s.dataset.step);
+  const a = t.closest('a[href*="wa.me"]'); if (a && window.track) {
+    const ubic = a.dataset.wspProc ? 'ficha' : a.dataset.wspJourney ? 'journey_'+a.dataset.wspJourney : a.dataset.wspReco ? 'recomendador' : a.id==='tab-wsp' ? 'barra' : 'otro';
+    track('whatsapp_click', {ubicacion:ubic, procedimiento:a.dataset.wspProc||'', modo:mode});
+  }
+});
+
+// ---- tab bar activa: al tocar y por posición de scroll
+const tabs = [...document.querySelectorAll('.tabbar a[data-tab]')];
+const setTab = (id) => tabs.forEach(a => a.classList.toggle('on', a.dataset.tab===id));
+let tabLock = 0;
+tabs.forEach(a => a.addEventListener('click', () => { setTab(a.dataset.tab); tabLock = Date.now() + 900; }));
+function tabByScroll(){
+  if (Date.now() < tabLock) return;
+  const y = scrollY + innerHeight*0.45;
+  const eq = document.getElementById('equipo'), ex = document.getElementById('explorar');
+  const atEnd = scrollY + innerHeight >= document.documentElement.scrollHeight - 8;
+  setTab(atEnd || y >= eq.offsetTop ? 'equipo' : y >= ex.offsetTop ? 'explorar' : 'top');
+}
+addEventListener('scroll', tabByScroll, {passive:true}); addEventListener('resize', tabByScroll); tabByScroll();
+
+document.getElementById('copy-phone').onclick = async e => { const b=e.currentTarget; try{ await navigator.clipboard.writeText('+56 9 3394 3090'); b.textContent='Copiado'; }catch(err){ b.textContent='+56 9 3394 3090'; } setTimeout(()=>b.textContent='Copiar',1800); };
+
+// ---- arranque: modo guardado, ancla
+let saved = 'pac'; try { saved = localStorage.getItem('bendov-mode') || 'pac'; } catch(e){}
+const h = (location.hash||'').slice(1);
+if (h==='nuevo' || h==='primera-vez') saved='new';
+setMode(saved);
+if (JOURNEYS.some(j => j.id===h)) setTimeout(()=>openJourney(h), 300);
+if (byId[h]) setTimeout(()=>openProc(h,'link'), 300);
+</script>
+
+<script>
+track('origen', {});
+const _marks=[25,50,75,100], _hit=new Set();
+addEventListener('scroll', () => { const p=Math.round((scrollY+innerHeight)/document.documentElement.scrollHeight*100); _marks.forEach(m => { if (p>=m && !_hit.has(m)) { _hit.add(m); track('scroll',{porcentaje:m}); } }); }, {passive:true});
+[30,60,180].forEach(s => setTimeout(() => track('tiempo_en_pagina',{segundos:s}), s*1000));
+</script>
+</body>
+</html>
