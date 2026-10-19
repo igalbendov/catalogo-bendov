@@ -160,7 +160,8 @@ footer b{color:var(--fg);font-weight:600;display:block}
 .tabbar{position:fixed;left:0;right:0;bottom:0;z-index:30;background:color-mix(in srgb,var(--surface) 92%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--line);padding:6px max(10px,env(safe-area-inset-right,0px)) calc(6px + env(safe-area-inset-bottom,0px)) max(10px,env(safe-area-inset-left,0px));display:grid;grid-template-columns:repeat(4,1fr);gap:4px}
 .tabbar a{display:grid;justify-items:center;gap:3px;text-decoration:none;font-size:.68rem;font-weight:500;color:var(--muted);padding:6px 4px;border-radius:12px;min-height:52px;align-content:center}
 .tabbar a svg{width:22px;height:22px}
-.tabbar a.on{color:var(--fg)}
+.tabbar a.on{color:var(--fg);background:var(--accent-soft);font-weight:600}
+.tabbar a.on svg{color:var(--accent)}
 .tabbar a.wsp{color:#0D112D;background:var(--accent);font-weight:600}
 
 /* ===== SHEET ===== */
@@ -277,8 +278,8 @@ footer b{color:var(--fg);font-weight:600;display:block}
 <script>
 const PHONE = '56933943090';
 const DOCS = {
-  bendov:  {ini:'DB', photo:'img/dr-bendov.png', name:'Dr. David Bendov',    short:'Dr. Bendov',  role:'Director médico · Corporal, ginecoestética y hormonal', bio:'Lipo Vaser, lipotransferencia, endoláser facial y corporal, hilos, láser CO2, cirugías faciales, ginecoestética y LifeChip. Más de 20 años en medicina estética.'},
-  colodro: {ini:'MC', photo:'img/dra-colodro.png', name:'Dra. Myriam Colodro', short:'Dra. Colodro', role:'Armonización facial', bio:'Toxina botulínica, rellenos y bioestimuladores, skin quality, exosomas, polinucleótidos y PRP facial. Resultados naturales, sin cirugía.'},
+  bendov:  {ini:'DB', photo:'img/dr-bendov.webp', name:'Dr. David Bendov',    short:'Dr. Bendov',  role:'Director médico · Corporal, ginecoestética y hormonal', bio:'Lipo Vaser, lipotransferencia, endoláser facial y corporal, hilos, láser CO2, cirugías faciales, ginecoestética y LifeChip. Más de 20 años en medicina estética.'},
+  colodro: {ini:'MC', photo:'img/dra-colodro.webp', name:'Dra. Myriam Colodro', short:'Dra. Colodro', role:'Armonización facial', bio:'Toxina botulínica, rellenos y bioestimuladores, skin quality, exosomas, polinucleótidos y PRP facial. Resultados naturales, sin cirugía.'},
 };
 const CATS = [
   {id:'facial', name:'Facial', long:'Armonización facial', sub:'Rostro natural, descansado y en armonía'},
