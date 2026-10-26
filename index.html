@@ -63,7 +63,9 @@ p{margin:0} a{color:inherit} button{font-family:var(--body);color:inherit}
 
 /* ===== top bar ===== */
 .top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:14px 6px}
-.brand{font-family:var(--display);font-size:1rem;letter-spacing:.06em;text-transform:uppercase}
+body.in-zone .top{justify-content:space-between}
+.brand{font-family:var(--display);font-size:.92rem;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
+@media (max-width:360px){.brand{font-size:.8rem}}
 .brand b{font-weight:500}
 .back{display:none;align-items:center;gap:8px;background:none;border:0;font-size:.95rem;font-weight:500;padding:8px 0;min-height:44px;cursor:pointer}
 .back svg{width:20px;height:20px}
@@ -111,6 +113,38 @@ footer b{color:var(--fg);font-weight:600}
 .search input{border:0;background:transparent;flex:1;font:inherit;font-size:16px;color:var(--fg);min-width:0;outline:none}
 .empty{color:var(--muted);padding:16px 0}
 
+/* ===== menú desplegable ===== */
+.menu-btn{display:inline-flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:8px 14px;min-height:42px;font-size:.9rem;font-weight:600;cursor:pointer}
+.menu-btn svg{width:18px;height:18px}
+.drawer{position:fixed;inset:0 0 0 auto;width:min(86vw,380px);z-index:61;background:var(--bg);transform:translateX(105%);transition:transform .3s cubic-bezier(.2,.8,.2,1);display:flex;flex-direction:column;box-shadow:-20px 0 60px rgba(0,0,0,.25);padding-top:env(safe-area-inset-top,0px)}
+.drawer.open{transform:translateX(0)}
+.drawer .dh{display:flex;align-items:center;justify-content:space-between;padding:16px 18px 10px;border-bottom:1px solid var(--line)}
+.drawer .dh b{font-family:var(--display);font-weight:500;font-size:1.15rem}
+.drawer .dbody{overflow-y:auto;padding:10px 18px calc(24px + env(safe-area-inset-bottom,0px));-webkit-overflow-scrolling:touch}
+.dsec{border-bottom:1px solid var(--line);padding:6px 0}
+.dsec summary{list-style:none;display:flex;align-items:center;justify-content:space-between;min-height:48px;font-weight:600;cursor:pointer;padding:6px 0}
+.dsec summary::-webkit-details-marker{display:none}
+.dsec summary small{font-weight:400;color:var(--muted);font-size:.8rem;margin-left:8px}
+.dsec summary .car{transition:transform .2s;color:var(--accent)}
+.dsec[open] summary .car{transform:rotate(90deg)}
+.dsec ul{list-style:none;margin:0;padding:0 0 8px}
+.dsec li button{width:100%;text-align:left;background:none;border:0;padding:10px 0 10px 12px;font-size:.93rem;cursor:pointer;border-left:2px solid var(--line);min-height:40px}
+.dsec li button:active{color:var(--accent)}
+.dlink{display:flex;align-items:center;gap:12px;width:100%;background:var(--navy);color:var(--on-navy);border:0;border-radius:14px;padding:14px 16px;text-align:left;font-weight:600;cursor:pointer;margin:10px 0 6px;min-height:56px}
+.dlink span{color:var(--accent)}
+.dlink.quiet{background:var(--surface);color:var(--fg);border:1px solid var(--line);font-weight:500}
+.reco-card{display:flex;align-items:center;gap:14px;margin-top:12px;padding:16px;border-radius:18px;background:var(--accent-soft);border:1px dashed var(--accent);text-align:left;cursor:pointer;width:100%}
+.reco-card b{font-family:var(--display);font-weight:500;font-size:1.15rem;display:block}
+.reco-card span{font-size:.86rem;color:var(--muted)}
+.reco-card .spark{font-size:1.4rem;color:var(--accent);flex:none}
+.steps{display:flex;gap:6px}.steps i{flex:1;height:4px;border-radius:2px;background:var(--line)}.steps i.on{background:var(--accent)}
+.opts{display:grid;gap:8px}
+.opt{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:56px;border:1px solid var(--line);background:var(--surface);border-radius:16px;padding:12px 16px;text-align:left;font:inherit;cursor:pointer;font-weight:500}
+.opt small{display:block;font-weight:400;color:var(--muted);font-size:.84rem}
+.opt .arrow{color:var(--accent)}
+.sback{background:none;border:0;color:var(--muted);font-weight:500;font-size:.9rem;cursor:pointer;padding:6px 0;justify-self:start;min-height:40px}
+.why{font-size:.88rem;color:var(--muted);border-left:2px solid var(--accent);padding-left:10px}
+
 /* ===== CTA fijo ===== */
 .cta{position:fixed;left:0;right:0;bottom:0;z-index:30;padding:10px max(16px,env(safe-area-inset-right,0px)) calc(12px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));background:linear-gradient(to top,var(--bg) 70%,transparent)}
 .cta a{width:100%;max-width:720px;margin:0 auto;box-shadow:0 10px 28px rgba(13,17,45,.22)}
@@ -139,6 +173,7 @@ footer b{color:var(--fg);font-weight:600}
 <div class="wrap">
   <div class="top">
     <div class="brand"><b>Bendov</b> Clínica Estética</div>
+    <button type="button" class="menu-btn" id="menu-btn" aria-label="Abrir catálogo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>Catálogo</button>
     <button type="button" class="back" id="back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 5l-7 7 7 7"/></svg>Inicio</button>
   </div>
 
@@ -149,6 +184,7 @@ footer b{color:var(--fg);font-weight:600}
       <h1>¿Qué quieres <em>mejorar?</em></h1>
       <p>Toca una zona y mira las opciones. La evaluación con el médico es gratis, presencial u online.</p>
       <div class="zones" id="zones"></div>
+      <button type="button" class="reco-card" id="reco-open"><span class="spark">✦</span><div><b>¿No sabes por dónde partir?</b><span>Responde 3 preguntas y te orientamos. Sin dejar datos.</span></div></button>
     </div>
 
     <section id="pacientes">
@@ -182,6 +218,7 @@ footer b{color:var(--fg);font-weight:600}
 <div class="cta"><a class="btn btn-gold" id="cta" href="#" target="_blank" rel="noopener">Agendar evaluación gratuita por WhatsApp</a></div>
 
 <div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-label="Catálogo completo"><div class="dh"><b>Catálogo completo</b><button type="button" class="close" id="drawer-close" aria-label="Cerrar" style="position:static;width:40px;height:40px;border-radius:50%;border:0;background:var(--surface);cursor:pointer">✕</button></div><div class="dbody" id="dbody"></div></aside>
 <div class="sheet" id="sheet" role="dialog" aria-modal="true"><div class="grab"></div><button type="button" class="close" id="sheet-close" aria-label="Cerrar">✕</button><div class="inner" id="sheet-body"></div></div>
 
 <script>
@@ -268,6 +305,12 @@ const ZONES = [
   {id:'gineco', b:'Zona íntima', s:'Salud, confort y estética'},
   {id:'hormonal', b:'Energía y bienestar', s:'Cansancio, sueño, libido · LifeChip'},
 ];
+const RECO = {
+  rostro:   {label:'Mi rostro', sub:'Arrugas, papada, piel, volumen', concerns:{arrugas:'Arrugas y líneas de expresión', papada:'Papada y contorno de mandíbula', piel:'Calidad de la piel, manchas, luminosidad', flacidez:'Flacidez y caída del rostro', ojeras:'Ojeras y mirada cansada', volumen:'Volumen en labios, pómulos o mentón', contorno:'Nariz, mentón o perfil'}},
+  cuerpo:   {label:'Mi cuerpo', sub:'Grasa localizada, flacidez, celulitis', concerns:{grasa:'Grasa localizada que no se va', flacidez:'Flacidez o piel sobrante', celulitis:'Celulitis', pecho:'Pecho masculino (ginecomastia)', sudor:'Sudoración excesiva', volumen:'Más volumen en glúteos', piel:'Estrías o cicatrices'}},
+  intimo:   {label:'Zona íntima', sub:'Salud, confort y estética', concerns:{forma:'Forma o tamaño de los labios', salud:'Sequedad, laxitud o pérdidas de orina leves'}},
+  bienestar:{label:'Energía y bienestar', sub:'Cansancio, sueño, libido, ánimo', concerns:{energia:'Cansancio, falta de energía o concentración', libido:'Libido baja o cambios de ánimo'}},
+};
 const SOURCES = {pantalla:'pantalla sala de espera', salapost:'sala post', wsp:'WhatsApp', isabel:'Isabel', ig:'Instagram'};
 let source = ''; try { source = sessionStorage.getItem('bendov-src') || ''; } catch(e){}
 const wsp = (t) => `https://wa.me/${PHONE}?text=${encodeURIComponent(t + (source ? ` (vi esto en ${SOURCES[source]})` : ''))}`;
@@ -315,7 +358,7 @@ document.getElementById('back').onclick = () => history.length>1 ? history.back(
 const sheet=document.getElementById('sheet'), scrim=document.getElementById('scrim'), sbody=document.getElementById('sheet-body');
 function openSheet(html){ sbody.innerHTML=html; sheet.classList.add('open'); scrim.classList.add('open'); document.body.style.overflow='hidden'; sbody.scrollTop=0; }
 function closeSheet(){ sheet.classList.remove('open'); scrim.classList.remove('open'); document.body.style.overflow=''; }
-scrim.onclick=closeSheet; document.getElementById('sheet-close').onclick=closeSheet;
+scrim.onclick=()=>{ closeSheet(); closeDrawer(); }; document.getElementById('sheet-close').onclick=closeSheet;
 addEventListener('keydown', e => { if (e.key==='Escape') closeSheet(); });
 let ty0=null; sheet.addEventListener('touchstart', e => { if (sbody.scrollTop<=0) ty0=e.touches[0].clientY; }, {passive:true});
 sheet.addEventListener('touchmove', e => { if (ty0!==null && e.touches[0].clientY-ty0>90) { ty0=null; closeSheet(); } }, {passive:true});
@@ -339,12 +382,58 @@ function openJourney(id){
   T('journey_click', {journey:id});
 }
 
+// ---- recomendador (3 pasos)
+const R = {zone:null, concern:null, pref:null};
+const bar = (n) => `<div class="steps">${[1,2,3].map(i=>`<i class="${i<=n?'on':''}"></i>`).join('')}</div>`;
+function recoStep(step){
+  const z = RECO[R.zone];
+  if (step===1) return openSheet(`${bar(1)}<p class="eyebrow">Paso 1 de 3</p><h2>¿Qué quieres mejorar?</h2><div class="opts">${Object.entries(RECO).map(([k,v])=>`<button type="button" class="opt" data-rzone="${k}"><span>${v.label}<small>${v.sub}</small></span><span class="arrow">→</span></button>`).join('')}</div>`);
+  if (step===2) return openSheet(`${bar(2)}<button type="button" class="sback" data-rstep="1">← Volver</button><p class="eyebrow">Paso 2 de 3 · ${z.label}</p><h2>¿Qué es lo que más te incomoda?</h2><div class="opts">${Object.entries(z.concerns).map(([k,v])=>`<button type="button" class="opt" data-rconcern="${k}"><span>${v}</span><span class="arrow">→</span></button>`).join('')}</div>`);
+  if (step===3) return openSheet(`${bar(3)}<button type="button" class="sback" data-rstep="2">← Volver</button><p class="eyebrow">Paso 3 de 3</p><h2>¿Qué prefieres?</h2><div class="opts"><button type="button" class="opt" data-rpref="NQ"><span>Sin cirugía<small>Sesiones cortas, sin recuperación</small></span><span class="arrow">→</span></button><button type="button" class="opt" data-rpref="MI"><span>Mínimamente invasivo<small>Anestesia local, pocos días de recuperación</small></span><span class="arrow">→</span></button><button type="button" class="opt" data-rpref="any"><span>Lo que dé mejor resultado<small>Incluye opciones quirúrgicas</small></span><span class="arrow">→</span></button></div>`);
+}
+function recoResult(){
+  const rank = {NQ:0, MI:1, Q:2}, pref = R.pref;
+  let pool = PROCS.filter(p => p.tags.includes(R.zone) && p.tags.includes(R.concern));
+  if (!pool.length) pool = PROCS.filter(p => p.tags.includes(R.zone));
+  const score = (p) => pref==='any' ? (p.hl?-1:0) : (p.tipo===pref ? -2 : rank[p.tipo]===rank[pref]+1 ? -1 : 0);
+  pool.sort((a,b) => score(a)-score(b) || (b.hl?1:0)-(a.hl?1:0));
+  const top = pool.slice(0,3), alt = pool.slice(3,6), z = RECO[R.zone], cname = z.concerns[R.concern];
+  const why = {NQ:'Priorizamos opciones sin cirugía, con sesiones cortas y sin tiempo de recuperación.', MI:'Priorizamos opciones mínimamente invasivas: anestesia local y pocos días de recuperación.', any:'Ordenadas por resultado: incluimos la opción quirúrgica cuando es la que mejor resuelve esto.'}[pref];
+  openSheet(`${bar(3)}<button type="button" class="sback" data-rstep="3">← Cambiar preferencia</button><p class="eyebrow">Tu orientación · ${z.label}</p><h2>Para "${cname.toLowerCase()}", esto es lo que haríamos</h2>
+    <p class="why">${why} La indicación final la da el médico en la evaluación gratuita.</p>
+    <div class="list">${top.map(row).join('')}</div>
+    <a class="btn btn-gold" target="_blank" rel="noopener" data-wsp="recomendador" href="${wsp(`Hola, me interesa mejorar: ${cname.toLowerCase()}. Opciones que vi: ${top.map(p=>p.name).join(', ')}. Quiero agendar una evaluación gratuita`)}">Agendar evaluación gratuita</a>
+    ${alt.length?`<p class="eyebrow" style="margin-top:4px">También podrías considerar</p><div class="list">${alt.map(row).join('')}</div>`:''}`);
+  T('recomendacion_resultado', {zona:R.zone, inquietud:R.concern, preferencia:pref, top: top.map(p=>p.name).join(' | ')});
+}
+function openReco(){ R.zone=R.concern=R.pref=null; closeDrawer(); recoStep(1); T('recomendador_abierto',{}); }
+
+// ---- menú desplegable (catálogo completo)
+const drawer = document.getElementById('drawer');
+document.getElementById('dbody').innerHTML = `
+  <button type="button" class="dlink" id="d-reco"><span>✦</span>Recomendador: ¿qué me conviene?</button>
+  ${CATS.map(c => { const items = PROCS.filter(p=>p.cat===c.id); return `<details class="dsec"><summary>${ZONES.find(z=>z.id===c.id).b}<small>${items.length}</small><svg class="car" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 5 7 7-7 7"/></svg></summary><ul>${items.map(p=>`<li><button type="button" data-open="${p.id}">${esc(p.name)}</button></li>`).join('')}</ul></details>`; }).join('')}
+  <details class="dsec"><summary>Si ya eres paciente<small>${JOURNEYS.length}</small><svg class="car" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 5 7 7-7 7"/></svg></summary><ul>${JOURNEYS.map(j=>`<li><button type="button" data-journey="${j.id}">${j.title}</button></li>`).join('')}</ul></details>
+  <button type="button" class="dlink quiet" id="d-team">Equipo médico</button>
+  <a class="dlink quiet" href="${wsp('Hola, quiero agendar una evaluación gratuita')}" target="_blank" rel="noopener" data-wsp="menu">Escribir por WhatsApp</a>`;
+function openDrawer(){ drawer.classList.add('open'); scrim.classList.add('open'); document.body.style.overflow='hidden'; T('menu_abierto',{}); }
+function closeDrawer(){ drawer.classList.remove('open'); if (!sheet.classList.contains('open')) { scrim.classList.remove('open'); document.body.style.overflow=''; } }
+document.getElementById('menu-btn').onclick = openDrawer;
+document.getElementById('drawer-close').onclick = closeDrawer;
+document.getElementById('d-reco').onclick = openReco;
+document.getElementById('reco-open').onclick = openReco;
+document.getElementById('d-team').onclick = () => { closeDrawer(); showHome(); setTimeout(()=>document.getElementById('equipo').scrollIntoView({behavior:'smooth'}),50); };
+
 // ---- clicks
 document.addEventListener('click', e => {
   const t=e.target;
   const z=t.closest('[data-zone]'); if (z) return showZone(z.dataset.zone);
-  const o=t.closest('[data-open]'); if (o) return openProc(o.dataset.open, sheet.classList.contains('open')?'journey':'zona');
-  const j=t.closest('[data-journey]'); if (j) return openJourney(j.dataset.journey);
+  const o=t.closest('[data-open]'); if (o) { const ctx = o.closest('#drawer') ? 'menu' : sheet.classList.contains('open') ? 'hoja' : 'zona'; closeDrawer(); return openProc(o.dataset.open, ctx); }
+  const j=t.closest('[data-journey]'); if (j) { closeDrawer(); return openJourney(j.dataset.journey); }
+  const rz=t.closest('[data-rzone]'); if (rz) { R.zone=rz.dataset.rzone; R.concern=null; return recoStep(2); }
+  const rc=t.closest('[data-rconcern]'); if (rc) { R.concern=rc.dataset.rconcern; return recoStep(3); }
+  const rp=t.closest('[data-rpref]'); if (rp) { R.pref=rp.dataset.rpref; return recoResult(); }
+  const rs=t.closest('[data-rstep]'); if (rs) return recoStep(+rs.dataset.rstep);
   if (t.closest('[data-close]')) return closeSheet();
   const a=t.closest('a[href*="wa.me"]'); if (a) T('whatsapp_click', {ubicacion:a.dataset.wsp||(a.id==='cta'?'cta_fijo':'otro'), procedimiento:a.dataset.proc||'', zona:zone||''});
 });
@@ -355,7 +444,8 @@ addEventListener('popstate', e => { closeSheet(); const z=(location.hash||'').sl
   const h=(location.hash||'').slice(1);
   if (SOURCES[h]) { source=h; try{sessionStorage.setItem('bendov-src',h)}catch(e){}; history.replaceState({}, '', location.pathname); document.getElementById('cta').href = wsp('Hola, quiero agendar una evaluación gratuita'); }
   T('origen', {});
-  if (CATS.some(c=>c.id===h)) showZone(h,false);
+  if (h==='recomendador' || h==='nuevo') setTimeout(openReco,250);
+  else if (CATS.some(c=>c.id===h)) showZone(h,false);
   else if (JOURNEYS.some(j=>j.id===h)) setTimeout(()=>openJourney(h),250);
   else if (byId[h]) { showZone(byId[h].cat,false); setTimeout(()=>openProc(h,'link'),250); }
 })();
